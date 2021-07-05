@@ -1,9 +1,9 @@
 {
-  "name": "@ditdot-dev/vue-flow-form",
-  "author": "DITDOT",
+  "name": "interactive-form",
+  "author": "Victor Guerra ",
   "description": "Create conversational conditional-logic forms with Vue.js.",
-  "version": "2.1.0",
-  "private": false,
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -80,6 +80,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ditdot-dev/vue-flow-form.git"
+    "url": "https://github.com/ovictorguerra/vue-flow-form.git"
   }
 }

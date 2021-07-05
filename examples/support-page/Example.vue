@@ -1,5 +1,3 @@
-// Create and setup your form here
- 
 <template>
   <div>
 
@@ -22,23 +20,23 @@
       <template v-slot:complete>
         <div class="f-section-wrap">
           <div v-if="questions[0].model === 'technical_issue'">
-            <span class="f-tagline">Submit issue &gt; Step 3/3</span>
+            <span class="f-tagline">Enviar solicitação &gt; Passo 3/3</span>
             <div v-if="loading">
-              <span class="fh2">Please wait, submitting...</span>
+              <span class="fh2">Por favor aguarde, enviando...</span>
             </div>
             <div v-else>
-              <span class="fh2">Your ticket number is: {{ getTicket() }}</span>
-              <p class="f-description"><span>Thank You 😊. Our support team will contact you as soon as possible.</span></p>
+              <span class="fh2">O protocolo de atendimento é: {{ getTicket() }}</span>
+              <p class="f-description"><span> Obrigado 😊. Nosso time de suporte entrarar em contato em até 12 horas.</span></p>
             </div>
           </div>
           <div v-else>
-            <span class="f-tagline">Support page &gt; Ticket status</span>
+            <span class="f-tagline">Página de Suporte &gt; Status</span>
             <div v-if="loading">
-              <span class="fh2">Please wait, checking...</span>
+              <span class="fh2">Por favor aguarde, analisando...</span>
             </div>
             <div v-else>
-              <span  class="fh2">Good news - the wheels are turning, your ticket No. {{ formatTicket(questions[2].model) }} is being processed!😉</span>
-              <p class="f-description"><span>Have a great day!</span></p>
+              <span  class="fh2">Boas notícias - Você será atendido. {{ formatTicket(questions[2].model) }} is being processed!😉</span>
+              <p class="f-description"><span>Tenha um ótimo dia!</span></p>
             </div>
           </div>
         </div>  
@@ -81,18 +79,18 @@
           {
             type: 'multiplechoice',
             id: 'multiple_choice',
-            tagline: 'Welcome to our demo support page!',
-            title: 'Hi 👋, how can we help you today?',
+            tagline: 'Bem Vindo ao suporte da Yub!',
+            title: 'Olá 👋, como podemos lhe ajudar hoje?',
             multiple: false,
             required: true,
             helpTextShow: false,
             options: [
               {
-                label: 'I have a technical issue',
+                label: 'Eu tenho uma dúvida técnica',
                 value: 'technical_issue'
               },
               {
-                label: 'I wish to check my ticket status',
+                label: 'Eu gostaria de chegar o status da minha solicitação',
                 value: 'enter_ticket'
               },
             ],
@@ -105,12 +103,12 @@
           {
             type: 'multiplechoice',
             id: 'technical_issue',
-            tagline: 'Submit issue > Step 1/3',
-            title: 'Have you read our technical FAQ?',
+            tagline: 'Solicitação Enviada > Passo 1/3',
+            title: 'Você já leu nosso FAQ de dúvidas técnicas?',
             multiple: false,
             required: true,
             helpTextShow: false,
-            description: "Here you'll find answers to",
+            description: "Aqui você encontra mais respostas",
             descriptionLink: [
               {
                 url: '#',
@@ -120,7 +118,7 @@
             ],
             options: [          
               {
-                label: 'Yes, but I couldn’t find the answer',
+                label: 'Sim, porém não se aplica a minha situação',
                 value: 'faq_no'
               }
             ],
@@ -132,9 +130,9 @@
           {
             type: 'text',
             id: 'enter_ticket',
-            tagline: 'Support page > Ticket status',
-            title: 'Please enter your 6-digit code.',
-            subtitle: 'You received this when you reported your problem.',
+            tagline: 'Página de Supórte > Status da Solicitação',
+            title: 'Por favor entre com seu código de 6 dígitos.',
+            subtitle: 'Você recebeu quando realizou a solicitação de suporte.',
             multiple: false, 
             required: true,
             mask: '#-#-#-#-#-#',
@@ -147,10 +145,10 @@
           {
             type: 'longtext',
             id: "faq_no",
-            tagline: 'Submit issue > Step 2/3',
-            title: 'Please describe your problem.',
+            tagline: 'Enviar Solicitação > Passo 2/3',
+            title: 'Por favor descreva seu problema.',
             required: true,
-            placeholder: 'Start typing here...',
+            placeholder: 'Relate os fatos aqui...',
             model: ''
           }
         ]
@@ -225,7 +223,7 @@
 </script>
 
 <style lang="css">
-  @import '../../src/assets/css/themes/theme-green.css';
+  @import '../../src/assets/css/themes/theme-minimal.css';
   /* If using the npm package, use the following lines instead of the one above */
   /* @import '~@ditdot-dev/vue-flow-form/dist/vue-flow-form.css'; */
   /* @import '~@ditdot-dev/vue-flow-form/dist/vue-flow-form.theme-green.css'; */

@@ -31,7 +31,7 @@ export const DropdownOptionBlank = Object.freeze({
 export const MaskPresets = Object.freeze({
   Date: '##/##/####',
   DateIso: '####-##-##',
-  PhoneUs: '(###) ###-####'
+  PhoneUs: '(##) #####-####'
 })
 
 export class ChoiceOption {

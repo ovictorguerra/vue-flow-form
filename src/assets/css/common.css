@@ -596,7 +596,8 @@ header.vff-header svg.f-logo {
 
 .vff span.f-tagline,
 .vff span.f-text {
-  margin-bottom: 8px;
+  display: block;
+  margin: 20px 0;
 }
 
 .vff span.f-sub {

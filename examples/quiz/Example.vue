@@ -1,5 +1,3 @@
-// Create and setup your form here
- 
 <template>
   <div>
     <header class="vff-header">
@@ -106,60 +104,60 @@
         questions: [      
           new QuestionModel({
             id: 'start',
-            tagline: '8 questions',
-            title: 'How much do you know about forms?',
-            content: 'Test how well you know HTML forms in the first quiz section.',
+            tagline: '8 Perguntas',
+            title: 'O que podemos fazer com um formulário fantástico?',
+            content: 'Informações importantes podem ser realizadas com esses fórmulários.',
             type: QuestionType.SectionBreak,
             required: true,
           }),
           new QuestionModel({
             id: 'html_1',
-            title: 'Which of the following are valid input field types?',
-            helpText: 'Choose all answers that apply.',
+            title: 'Quais dos seguintes campos são válidos?',
+            helpText: 'Escolha todas as respostas que se aplicam.',
             type: QuestionType.MultipleChoice,
             required: true,
             multiple: true,
             options: [
               new ChoiceOption({
-                label: 'check', 
+                label: 'Primeira', 
                 value: '1'
               }),
               new ChoiceOption({
-                label: 'date', 
+                label: 'Segunda', 
                 value: '2'
                }),
               new ChoiceOption({
-                label: 'image', 
+                label: 'Terceira', 
                 value: '3'
               }), 
               new ChoiceOption({
-                label: 'telephone', 
+                label: 'Telefone', 
                 value: '4'
               })
             ]
           }),
           new QuestionModel({
             id: 'html_2',
-            title: '<label> is associated with <input> using the "name" attribute.',
+            title: 'Associado aos nomes dos atributos.',
             helpTextShow: false,
             type: QuestionType.MultipleChoice,
             required: true,
             multiple: false,
              options: [
               new ChoiceOption({
-                label: 'True', 
+                label: 'Verdadeiro', 
                 value: 'true'
               }),
               new ChoiceOption({
-                label: 'False', 
+                label: 'Falso', 
                 value: 'false'
               })
             ]
           }),
           new QuestionModel({
             id: 'html_3',
-            title: 'Which HTML element is used to define a dropdown list?',
-            helpText: "Which one sounds right? There's only one right answer.",
+            title: 'Quais elementos limitam o poder do homem?',
+            helpText: "Não compreende a pergunta, deixei sua opnião ao final.",
             type: QuestionType.MultipleChoice,
             required: true,
             multiple: false, 

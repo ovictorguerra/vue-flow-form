@@ -1,5 +1,3 @@
-// Create and setup your form here
- 
 <template>
   <div>
     <header class="vff-header">
@@ -27,12 +25,12 @@
      <template v-slot:complete>
         <div class="f-section-wrap">
           <p>
-            <span class="fh2">Thank you. 🙏</span>
+            <span class="fh2">Obrigado 🙏</span>
             <span class="f-section-text">
-              Great work, the survey is completed, and our demo is done. You can review your answers or press submit.
+              Agradecemos pelo contato! Saiba que sempre pode contar conosco!!
             </span>
           </p>
-          <p class="f-description">Note: No data will be saved and/or sent in this demo.</p>
+          <p class="f-description">Nota: Nó máximo em 12 horas retornamos o contato.</p>
         </div>  
       </template>
 
@@ -56,7 +54,7 @@
           </a>
         </div>
 
-        <p class="text-success" v-if="submitted">Submitted succesfully.</p>
+        <p class="text-success" v-if="submitted">Enviado com sucesso</p>
       </template>
     </flow-form>
   </div>
@@ -91,24 +89,24 @@
         questions: [
           new QuestionModel({
             id: 'first_name',
-            tagline: 'Hi! Welcome to our demo survey 😊',
-            title: 'What is your first name?',
+            tagline: 'Olá! Seja Bem Vindo à Yub 😊',
+            title: 'Como podemos lhe chamar?',
             type: QuestionType.Text,
             required: true,
-            placeholder: 'Start typing here...'
+            placeholder: 'Nome completo, please ...'
           }),
           new QuestionModel({
             id: 'email',
-            tagline: "Nice to meet you 👀, let's continue",
-            title: 'Provide an example email.',
+            tagline: "Muito bemm 👀, vamos continuar",
+            title: 'Informe seu melhor e-mail.',
             type: QuestionType.Email,
             required: true,
-            placeholder: 'Start typing here...'
+            placeholder: 'E-mail aqui...'
           }),
           new QuestionModel({
             id: 'multiple_choice_image',
-            tagline: "Let's take it one step further...",
-            title: 'Tell us what is your favorite social network hangout.',
+            tagline: "Mais um passo, estamos quase lá...",
+            title: 'Em qual rede social você mais acompanha a Yub?',
             helpTextShow: false,
             type: QuestionType.MultiplePictureChoice,
             multiple: false,
@@ -138,22 +136,22 @@
           }),
           new QuestionModel({
             id: 'phone',
-            title: 'Doing great! 👍 Go ahead and try with a phone number.',
+            title: 'Muito Bem! 👍 Vá em frente e nos informe seu telefone.',
             type: QuestionType.Phone,
             required: true,
-            mask: '(###) ###-####'
+            mask: '(##) #####-####'
           }),
           new QuestionModel({
-            id: 'movies',
-            title: 'List your favorite movies. 🍿',
+            id: 'question',
+            title: 'Agora nos informe o motivo do seu contato! Em até 12 horas retornaremos o contato 🍿',
             type: QuestionType.LongText,
             required: true,
-            placeholder: 'Start typing here...'
+            placeholder: 'O que foi que aconteceu?...'
           }),
           new QuestionModel({
             id: 'multiple_choice',
-            tagline: 'FYI, You can always go back 👈, use the up arrow on the bottom.',
-            title: 'Multiple choice question:',
+            tagline: 'Sempre é possível retornar à pergunta anterior através das setas 👈',
+            title: 'Questões de múltipla escolha (escolha única):',
             helpTextShow: false,
             type: QuestionType.MultipleChoice,
             multiple: false,
@@ -161,60 +159,60 @@
             required: true,
             options: [
               new ChoiceOption({
-                label: 'Answer 1'
+                label: 'Reposta 1'
               }),
               new ChoiceOption({
-                label: 'Answer 2'
+                label: 'Resposta 2'
                }),
               new ChoiceOption({
-                label: 'Answer 3'
+                label: 'Resposta 3'
               })
             ]
           }),
           new QuestionModel({
             id: 'multiple_choices',
-            title: 'Multiple choices question:',
+            title: 'Questão de múltipla escolha (com mais de uma opção):',
             type: QuestionType.MultipleChoice,
             multiple: true,
-            helpText: 'Select all that apply. 👇',
+            helpText: 'Selecione todos os que você acredita ser necessário 👇',
             required: true,
             options: [
               new ChoiceOption({
-                label: 'Answer 1'
+                label: 'Resposta 1'
               }),
               new ChoiceOption({
-                label: 'Answer 2'
+                label: 'Resposta 2'
               }),
               new ChoiceOption({
-                label: 'Answer 3'
+                label: 'Resposta 3'
               }),
               new ChoiceOption({
-                label: 'Answer 4'
+                label: 'Resposta 4'
               })
             ]
           }),
           new QuestionModel({
             id: 'break_1',
-            title: 'Awesome, thank you. 🙏',
-            content: 'You arrived at the section break of our little demo survey. To continue exploring, just press enter or use the continue button.',
-            description: 'Note: We will take a look at our multiple path feature next.',
+            title: 'Perfeito, obrigado. 🙏',
+            content: 'Estamos quase chegando ao fim, vamos lá.',
+            description: 'Nota: É possível criar fluxos de perguntas que ocorrem de acordo com as respostas.',
             type: QuestionType.SectionBreak
           }),
           new QuestionModel({
             id: 'choose_path',
-            tagline: 'Where would you like to go? 🤔',
-            title: 'Choose your path:',
+            tagline: 'Agora é um momento de escolha? 🤔',
+            title: 'Por qual caminho deseja seguir:',
             type: QuestionType.Dropdown,
             multiple: false,
-            placeholder: 'Select',
+            placeholder: 'Selecionar',
             inline: true,
             required: true,
             options: [
               new ChoiceOption({
-                label: 'Path A'
+                label: 'Narnia'
               }),
               new ChoiceOption({
-                label: 'Path B',
+                label: 'País das Maravilhas',
                 value: 'path_b'
               })
             ],
@@ -224,8 +222,8 @@
           }),
           new QuestionModel({
             id: 'path_a',
-            title: 'Excellent choice! 🥳',
-            content: 'Press enter or use the continue button for the final submit screen.',
+            title: 'Excelente escolha! 🥳',
+            content: 'Em Nárnia encontramos as aventuras mais irreais.',
             type: QuestionType.SectionBreak,
             jump: {
               _other: '_submit'
@@ -234,18 +232,18 @@
           new QuestionModel({
             id: 'path_b',
             tagline: 'Path B',
-            title: 'Hmm, are you sure?',
-            helpText: 'Path A sounds like a winner! 😉',
+            title: 'Hmm, Escolha Interessante!!',
+            helpText: 'No País das maravilhas a loucura é normal! 😉',
             type: QuestionType.MultipleChoice,
             multiple: false,
             required: true,
             options: [
               new ChoiceOption({
-                label: 'Ok, let\'s go with A',
+                label: 'Ok, vamos dançar!!',
                 value: 'path_a'
               }),
               new ChoiceOption({
-                label: 'Yes, finish the survey'
+                label: 'Não, entrei por engano'
               })
             ],
             jump: {
